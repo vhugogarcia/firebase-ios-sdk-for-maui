@@ -15,8 +15,6 @@
         <Kind>Framework</Kind>
         <SmartLink>True</SmartLink>
         <ForceLoad>True</ForceLoad>
-        <LinkerFlags>-ObjC</LinkerFlags>
-        <Frameworks>MobileCoreServices</Frameworks>
       </_NativeReference>
       <NativeReference Include="@(_NativeReference)" />
     </ItemGroup>
