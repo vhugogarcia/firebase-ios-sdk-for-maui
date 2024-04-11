@@ -1,6 +1,6 @@
 // Firebase artifacts available to be built. These artifacts generate NuGets.
 Artifact FIREBASE_AB_TESTING_ARTIFACT              = new Artifact ("Firebase.ABTesting",              "8.10.0.3", "11.0", ComponentGroup.Firebase, csprojName: "ABTesting");
-Artifact FIREBASE_ANALYTICS_ARTIFACT               = new Artifact ("Firebase.Analytics",              "8.10.0.3", "11.0", ComponentGroup.Firebase, csprojName: "Analytics");
+Artifact FIREBASE_ANALYTICS_ARTIFACT               = new Artifact ("Firebase.Analytics",              "10.16.0.0", "11.0", ComponentGroup.Firebase, csprojName: "Analytics");
 Artifact FIREBASE_AUTH_ARTIFACT                    = new Artifact ("Firebase.Auth",                   "10.16.0.0", "11.0", ComponentGroup.Firebase, csprojName: "Auth");
 Artifact FIREBASE_CLOUD_FIRESTORE_ARTIFACT         = new Artifact ("Firebase.CloudFirestore",         "8.10.0.3", "11.0", ComponentGroup.Firebase, csprojName: "CloudFirestore");
 Artifact FIREBASE_CLOUD_FUNCTIONS_ARTIFACT         = new Artifact ("Firebase.CloudFunctions",         "10.16.0.0", "11.0", ComponentGroup.Firebase, csprojName: "CloudFunctions");
@@ -136,7 +136,7 @@ void SetArtifactsPodSpecs ()
 		PodSpec.Create ("Firebase", "8.10.0", frameworkSource: FrameworkSource.Pods, frameworkName: "FirebaseABTesting", targetName: "FirebaseABTesting", subSpecs: new [] { "ABTesting" })
 	};
 	FIREBASE_ANALYTICS_ARTIFACT.PodSpecs = new [] {
-		PodSpec.Create ("Firebase", "8.10.0", subSpecs: new [] { "Analytics" })
+		PodSpec.Create ("FirebaseAnalytics", "10.16.0")
 	};
 	FIREBASE_AUTH_ARTIFACT.PodSpecs = new [] {
 		PodSpec.Create ("FirebaseAuth", "10.16.0", frameworkSource: FrameworkSource.Pods),
