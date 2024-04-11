@@ -16,15 +16,15 @@
     <ProcessEnums>true</ProcessEnums>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageId>Xamarin.Google.iOS.MobileAds</PackageId>
+    <PackageId>AdamE.Google.iOS.MobileAds</PackageId>
     <Title>Google APIs Mobile Ads iOS Library</Title>
     <Summary>C# bindings for Google APIs Mobile Ads iOS Library</Summary>
     <Description>C# bindings for Google APIs Mobile Ads iOS Library</Description>
-    <Authors>Microsoft</Authors>
-    <Owners>Microsoft</Owners>
-    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
+    <Authors>Microsoft, Adam Essenmacher</Authors>
+    <Owners>Adam Essenmacher</Owners>
+    <Copyright>© Microsoft Corporation. All rights reserved. © 2024, Adam Essenmacher.</Copyright>
     <PackageIcon>googleiosmobileads_128x128.png</PackageIcon>
-    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865562</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/AdamEssenmacher/GoogleApisForiOSComponents</PackageProjectUrl>
     <PackageLicenseFile>License.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageVersion>8.13.0.3</PackageVersion>

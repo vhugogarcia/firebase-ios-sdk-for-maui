@@ -15,15 +15,15 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageId>Xamarin.Google.iOS.Maps</PackageId>
+    <PackageId>AdamE.Google.iOS.Maps</PackageId>
     <Title>Google APIs Maps iOS Library</Title>
     <Summary>C# bindings for Google APIs Maps iOS Library</Summary>
     <Description>C# bindings for Google APIs Maps iOS Library</Description>
-    <Authors>Microsoft</Authors>
-    <Owners>Microsoft</Owners>
-    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
+    <Authors>Microsoft, Adam Essenmacher</Authors>
+    <Owners>Adam Essenmacher</Owners>
+    <Copyright>© Microsoft Corporation. All rights reserved. © 2024, Adam Essenmacher.</Copyright>
     <PackageIcon>googleiosmaps_128x128.png</PackageIcon>
-    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865548</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/AdamEssenmacher/GoogleApisForiOSComponents</PackageProjectUrl>
     <PackageLicenseFile>License.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageVersion>6.0.1.1</PackageVersion>

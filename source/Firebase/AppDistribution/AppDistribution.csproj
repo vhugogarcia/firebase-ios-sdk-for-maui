@@ -15,15 +15,15 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageId>Xamarin.Firebase.iOS.AppDistribution</PackageId>
+    <PackageId>AdamE.Firebase.iOS.AppDistribution</PackageId>
     <Title>Firebase APIs App Distribution iOS Library</Title>
     <Summary>C# bindings for Firebase APIs App Distribution iOS Library</Summary>
     <Description>C# bindings for Firebase APIs App Distribution iOS Library</Description>
-    <Authors>Microsoft</Authors>
-    <Owners>Microsoft</Owners>
-    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
+    <Authors>Microsoft, Adam Essenmacher</Authors>
+    <Owners>Adam Essenmacher</Owners>
+    <Copyright>© Microsoft Corporation. All rights reserved. © 2024, Adam Essenmacher.</Copyright>
     <PackageIcon>firebaseiosappdistribution_128x128.png</PackageIcon>
-    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865559</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/AdamEssenmacher/GoogleApisForiOSComponents</PackageProjectUrl>
     <PackageLicenseFile>License.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageVersion>8.10.0</PackageVersion>
