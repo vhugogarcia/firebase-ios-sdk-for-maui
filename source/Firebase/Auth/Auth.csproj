@@ -53,6 +53,9 @@
     <_NativeReference Include="..\..\..\externals\FirebaseAuth.xcframework">
       <_Id>$(_FirebaseAuthId)</_Id>
     </_NativeReference>
+    <_NativeReference Include="..\..\..\externals\RecaptchaInterop.xcframework">
+      <_Id>$(_RecaptchaInteropId)</_Id>
+    </_NativeReference>
   </ItemGroup>
   <!-- End of workaround -->
   <ItemGroup Condition="'$(TargetFramework)' == 'xamarin.ios10'">
