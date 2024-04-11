@@ -10,7 +10,7 @@
     <RootNamespace>Firebase.Core</RootNamespace>
     <AssemblyName>Firebase.Core</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>8.10.0.3</FileVersion>
+    <FileVersion>10.16.0.0</FileVersion>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
@@ -26,7 +26,7 @@
     <PackageProjectUrl>https://github.com/AdamEssenmacher/GoogleApisForiOSComponents</PackageProjectUrl>
     <PackageLicenseFile>License.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageVersion>8.10.0.3</PackageVersion>
+    <PackageVersion>10.16.0.0</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\..\AssemblyInfo.cs" />
@@ -53,14 +53,8 @@
     <_NativeReference Include="..\..\..\externals\FirebaseCore.xcframework">
       <_Id>$(_FirebaseCoreId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\FirebaseCoreDiagnostics.xcframework">
-      <_Id>$(_FirebaseCoreDiagnosticsId)</_Id>
-    </_NativeReference>
     <_NativeReference Include="..\..\..\externals\GTMSessionFetcher.xcframework">
       <_Id>$(_GTMSessionFetcherId)</_Id>
-    </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\GoogleAPIClientForREST.xcframework">
-      <_Id>$(_GoogleAPIClientForRESTId)</_Id>
     </_NativeReference>
     <_NativeReference Include="..\..\..\externals\GoogleDataTransport.xcframework">
       <_Id>$(_GoogleDataTransportId)</_Id>
@@ -68,14 +62,8 @@
     <_NativeReference Include="..\..\..\externals\FBLPromises.xcframework">
       <_Id>$(_FBLPromisesId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\GoogleToolboxForMac.xcframework">
-      <_Id>$(_GoogleToolboxForMacId)</_Id>
-    </_NativeReference>
     <_NativeReference Include="..\..\..\externals\GoogleUtilities.xcframework">
       <_Id>$(_GoogleUtilitiesId)</_Id>
-    </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\GoogleUtilitiesComponents.xcframework">
-      <_Id>$(_GoogleUtilitiesComponentsId)</_Id>
     </_NativeReference>
     <_NativeReference Include="..\..\..\externals\nanopb.xcframework">
       <_Id>$(_nanopbId)</_Id>
@@ -83,8 +71,29 @@
     <_NativeReference Include="..\..\..\externals\leveldb.xcframework">
       <_Id>$(_leveldbId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\Protobuf.xcframework">
-      <_Id>$(_ProtobufId)</_Id>
+    <_NativeReference Include="..\..\..\externals\FirebaseAppCheckInterop.xcframework">
+      <_Id>$(_FirebaseAppCheckInteropId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="..\..\..\externals\FirebaseAuthInterop.xcframework">
+      <_Id>$(_FirebaseAuthInteropId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="..\..\..\externals\FirebaseCoreExtension.xcframework">
+      <_Id>$(_FirebaseCoreExtensionId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="..\..\..\externals\FirebaseCoreInternal.xcframework">
+      <_Id>$(_FirebaseCoreInternalId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="..\..\..\externals\FirebaseMessagingInterop.xcframework">
+      <_Id>$(_FirebaseMessagingInteropId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="..\..\..\externals\FirebaseSharedSwift.xcframework">
+      <_Id>$(_FirebaseSharedSwiftId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="..\..\..\externals\Promises.xcframework">
+      <_Id>$(_Promises)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="..\..\..\externals\FirebaseSessions.xcframework">
+      <_Id>$(_FirebaseSessions)</_Id>
     </_NativeReference>
   </ItemGroup>
   <!-- End of workaround -->
