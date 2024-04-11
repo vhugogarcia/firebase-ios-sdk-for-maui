@@ -36,8 +36,8 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="UserMessagingPlatform.targets" Pack="True" PackagePath="build/Xamarin.Google.iOS.UserMessagingPlatform.targets" />
-    <None Include="UserMessagingPlatform.targets" Pack="True" PackagePath="buildTransitive/Xamarin.Google.iOS.UserMessagingPlatform.targets" />
+    <None Include="UserMessagingPlatform.targets" Pack="True" PackagePath="build/AdamE.Google.iOS.UserMessagingPlatform.targets" />
+    <None Include="UserMessagingPlatform.targets" Pack="True" PackagePath="buildTransitive/AdamE.Google.iOS.UserMessagingPlatform.targets" />
     <None Include="External-Dependency-Info.txt" Pack="True" PackagePath="THIRD-PARTY-NOTICES.txt" />
     <None Include="License.md" Pack="True" PackagePath="License.md" />
     <None Include="../../../icons/googleiosmobileads_128x128.png" Pack="True" PackagePath="googleiosmobileads_128x128.png" />

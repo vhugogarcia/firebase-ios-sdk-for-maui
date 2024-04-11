@@ -35,8 +35,8 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="BarcodeScanning.targets" Pack="True" PackagePath="build/Xamarin.MLKit.iOS.BarcodeScanning.targets" />
-    <None Include="BarcodeScanning.targets" Pack="True" PackagePath="buildTransitive/Xamarin.MLKit.iOS.BarcodeScanning.targets" />
+    <None Include="BarcodeScanning.targets" Pack="True" PackagePath="build/AdamE.MLKit.iOS.BarcodeScanning.targets" />
+    <None Include="BarcodeScanning.targets" Pack="True" PackagePath="buildTransitive/AdamE.MLKit.iOS.BarcodeScanning.targets" />
     <None Include="External-Dependency-Info.txt" Pack="True" PackagePath="THIRD-PARTY-NOTICES.txt" />
     <None Include="License.md" Pack="True" PackagePath="License.md" />
     <None Include="../../../icons/firebaseiosmlkit_128x128.png" Pack="True" PackagePath="firebaseiosmlkit_128x128.png" />

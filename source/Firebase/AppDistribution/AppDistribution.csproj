@@ -35,8 +35,8 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AppDistribution.targets" Pack="True" PackagePath="build/Xamarin.Firebase.iOS.AppDistribution.targets" />
-    <None Include="AppDistribution.targets" Pack="True" PackagePath="buildTransitive/Xamarin.Firebase.iOS.AppDistribution.targets" />
+    <None Include="AppDistribution.targets" Pack="True" PackagePath="build/AdamE.Firebase.iOS.AppDistribution.targets" />
+    <None Include="AppDistribution.targets" Pack="True" PackagePath="buildTransitive/AdamE.Firebase.iOS.AppDistribution.targets" />
     <None Include="License.md" Pack="True" PackagePath="License.md" />
     <None Include="../../../icons/firebaseiosappdistribution_128x128.png" Pack="True" PackagePath="firebaseiosappdistribution_128x128.png" />
   </ItemGroup>

@@ -36,8 +36,8 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Analytics.targets" Pack="True" PackagePath="build/Xamarin.Firebase.iOS.Analytics.targets" />
-    <None Include="Analytics.targets" Pack="True" PackagePath="buildTransitive/Xamarin.Firebase.iOS.Analytics.targets" />
+    <None Include="Analytics.targets" Pack="True" PackagePath="build/AdamE.Firebase.iOS.Analytics.targets" />
+    <None Include="Analytics.targets" Pack="True" PackagePath="buildTransitive/AdamE.Firebase.iOS.Analytics.targets" />
     <None Include="License.md" Pack="True" PackagePath="License.md" />
     <None Include="../../../icons/firebaseiosanalytics_128x128.png" Pack="True" PackagePath="firebaseiosanalytics_128x128.png" />
   </ItemGroup>

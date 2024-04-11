@@ -35,10 +35,10 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Cast.targets" Pack="True" PackagePath="build/Xamarin.Google.iOS.Cast.targets" />
-    <None Include="Cast.targets" Pack="True" PackagePath="buildTransitive/Xamarin.Google.iOS.Cast.targets" />
-    <None Include="Cast.props" Pack="True" PackagePath="build/Xamarin.Google.iOS.Cast.props" />
-    <None Include="Cast.props" Pack="True" PackagePath="buildTransitive/Xamarin.Google.iOS.Cast.props" />
+    <None Include="Cast.targets" Pack="True" PackagePath="build/AdamE.Google.iOS.Cast.targets" />
+    <None Include="Cast.targets" Pack="True" PackagePath="buildTransitive/AdamE.Google.iOS.Cast.targets" />
+    <None Include="Cast.props" Pack="True" PackagePath="build/AdamE.Google.iOS.Cast.props" />
+    <None Include="Cast.props" Pack="True" PackagePath="buildTransitive/AdamE.Google.iOS.Cast.props" />
     <None Include="readme.txt" Pack="True" PackagePath="readme.txt" />
     <None Include="License.md" Pack="True" PackagePath="License.md" />
     <None Include="../../../icons/googleioscast_128x128.png" Pack="True" PackagePath="googleioscast_128x128.png" />
