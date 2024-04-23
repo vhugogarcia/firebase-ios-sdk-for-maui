@@ -1,3 +1,12 @@
+# Fork notes:
+FirebaseAnalytics 10.17+ requires that additional mtouch arguments be added to the iOS project:
+
+For iPhone: `--gcc_flags -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos`
+
+For simulator: `--gcc_flags -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/`
+
+You may need to adjust the XCode location if it's not default.
+
 # Xamarin Components for Google APIs for iOS
 
 Xamarin creates and maintains Xamarin.iOS bindings for the Google APIs for iOS Libraries, including:
