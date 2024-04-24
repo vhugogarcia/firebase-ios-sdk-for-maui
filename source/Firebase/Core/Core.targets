@@ -4,6 +4,7 @@
     <_GoogleAppMeasurementItemsFolder>GAppM-10.17.0</_GoogleAppMeasurementItemsFolder>
     <_GoogleAppMeasurementSDKBaseFolder>$(XamarinBuildDownloadDir)$(_GoogleAppMeasurementItemsFolder)\GoogleAppMeasurement-10.17.0\Frameworks\</_GoogleAppMeasurementSDKBaseFolder>
   </PropertyGroup>
+  <!-- *.tar.gz URLs can be found in the podspec: https://github.com/CocoaPods/Specs/tree/master/Specs/e/3/b/GoogleAppMeasurement -->	
   <ItemGroup Condition="('$(OutputType)'!='Library' OR '$(IsAppExtension)'=='True')">
     <XamarinBuildDownload Include="$(_GoogleAppMeasurementItemsFolder)">
       <Url>https://dl.google.com/firebase/ios/analytics/ef96177ad70fa3e1/GoogleAppMeasurement-10.17.0.tar.gz</Url>
