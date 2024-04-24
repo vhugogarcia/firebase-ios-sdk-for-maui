@@ -1,5 +1,25 @@
 # Fork notes:
-FirebaseAnalytics 10.17+ requires that additional mtouch arguments be added to the iOS project:
+
+On .NET6+, FirebaseAnalytics 10.17+ requires this target be added to your app's .csproj:
+```xml
+<!-- Target needed until LinkWithSwiftSystemLibraries makes it into the SDK: https://github.com/xamarin/xamarin-macios/pull/20463 -->
+<Target Name="LinkWithSwift" DependsOnTargets="_ParseBundlerArguments;_DetectSdkLocations" BeforeTargets="_LinkNativeExecutable">
+    <PropertyGroup>
+        <_SwiftPlatform Condition="$(RuntimeIdentifier.StartsWith('iossimulator-'))">iphonesimulator</_SwiftPlatform>
+        <_SwiftPlatform Condition="$(RuntimeIdentifier.StartsWith('ios-'))">iphoneos</_SwiftPlatform>
+    </PropertyGroup>
+    <ItemGroup>
+        <_CustomLinkFlags Include="-L" />
+        <_CustomLinkFlags Include="/usr/lib/swift" />
+        <_CustomLinkFlags Include="-L" />
+        <_CustomLinkFlags Include="$(_SdkDevPath)/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/$(_SwiftPlatform)" />
+        <_CustomLinkFlags Include="-Wl,-rpath" />
+        <_CustomLinkFlags Include="-Wl,/usr/lib/swift" />
+    </ItemGroup>
+</Target>
+```
+
+On Xamarin.iOS, FirebaseAnalytics 10.17+ requires that additional mtouch arguments be added to the iOS project:
 
 For iPhone: `--gcc_flags -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos`
 
@@ -17,20 +37,20 @@ Xamarin creates and maintains Xamarin.iOS bindings for the Google APIs for iOS L
 |------------------------------------------------------------------------------|-----------------------------------------------|
 | [Xamarin.Firebase.iOS.ABTesting][F.ABTesting.Name]                           | [8.10.0][F.ABTesting.Package]                 |
 | [Xamarin.Firebase.iOS.AdMob][F.AdMob.Name]                                   | [8.10.0.0][F.AdMob.Package]                   |
-| [AdamE.Firebase.iOS.Analytics][F.Analytics.Name]                             | [10.17.0][F.Analytics.Package]                 |
-| [AdamE.Firebase.iOS.Auth][F.Auth.Name]                                       | [10.17.0][F.Auth.Package]                      |
-| [AdamE.Firebase.iOS.CloudFirestore][F.CloudFirestore.Name]                   | [10.17.0][F.CloudFirestore.Package]            |
-| [AdamE.Firebase.iOS.CloudFunctions][F.CloudFunctions.Name]                   | [10.17.0][F.CloudFunctions.Package]            |
-| [AdamE.Firebase.iOS.CloudMessaging][F.CloudMessaging.Name]                   | [10.17.0][F.CloudMessaging.Package]            |
-| [AdamE.Firebase.iOS.Core][F.Core.Name]                                       | [10.17.0][F.Core.Package]                      |
+| [AdamE.Firebase.iOS.Analytics][F.Analytics.Name]                             | [10.18.0][F.Analytics.Package]                 |
+| [AdamE.Firebase.iOS.Auth][F.Auth.Name]                                       | [10.18.0][F.Auth.Package]                      |
+| [AdamE.Firebase.iOS.CloudFirestore][F.CloudFirestore.Name]                   | [10.18.0][F.CloudFirestore.Package]            |
+| [AdamE.Firebase.iOS.CloudFunctions][F.CloudFunctions.Name]                   | [10.18.0][F.CloudFunctions.Package]            |
+| [AdamE.Firebase.iOS.CloudMessaging][F.CloudMessaging.Name]                   | [10.18.0][F.CloudMessaging.Package]            |
+| [AdamE.Firebase.iOS.Core][F.Core.Name]                                       | [10.18.0][F.Core.Package]                      |
 | [Xamarin.Firebase.iOS.Crashlytics][F.Crashlytics.Name]                       | [8.10.0][F.Crashlytics.Package]               |
 | [Xamarin.Firebase.iOS.Database][F.Database.Name]                             | [8.10.0][F.Database.Package]                  |
 | [Xamarin.Firebase.iOS.DynamicLinks][F.DynamicLinks.Name]                     | [8.10.0][F.DynamicLinks.Package]              |
 | [Xamarin.Firebase.iOS.InAppMessaging][F.InAppMessaging.Name]                 | [8.10.0][F.InAppMessaging.Package]            |
-| [AdamE.Firebase.iOS.Installations][F.Installations.Name]                     | [10.17.0][F.Installations.Package]             |
+| [AdamE.Firebase.iOS.Installations][F.Installations.Name]                     | [10.18.0][F.Installations.Package]             |
 | [Xamarin.Firebase.iOS.PerformanceMonitoring][F.PerformanceMonitoring.Name]   | [8.10.0][F.PerformanceMonitoring.Package]     |
 | [Xamarin.Firebase.iOS.RemoteConfig][F.RemoteConfig.Name]                     | [8.10.0][F.RemoteConfig.Package]              |
-| [AdamE.Firebase.iOS.Storage][F.Storage.Name]                                 | [10.17.0][F.Storage.Package]                   |
+| [AdamE.Firebase.iOS.Storage][F.Storage.Name]                                 | [10.18.0][F.Storage.Package]                   |
 | [Xamarin.Google.iOS.Analytics][G.Analytics.Name]                             | [3.20.0.0][G.Analytics.Package]               |
 | [Xamarin.Google.iOS.Cast][G.Cast.Name]                                       | [4.7.0.0][G.Cast.Package]                     |
 | [Xamarin.Google.iOS.Maps][G.Maps.Name]                                       | [6.0.1.0][G.Maps.Package]                     |
@@ -67,20 +87,20 @@ Here's a table that shows in which global version is located each component of F
 |----------------------------------|:------------------:|:--------------:|
 | Firebase A/B Testing             | **8.10.0**         | **8.10.0**     |
 | Firebase AdMob                   | **8.10.0**         | **8.10.0**     |
-| Firebase Analytics               | **10.17.0**        | **10.17.0**    |
-| Firebase Auth                    | **10.17.0**        | **10.17.0**    |
-| Firebase Cloud Firestore         | **10.17.0**        | **10.17.0**    |
-| Firebase Cloud Functions         | **10.17.0**        | **10.17.0**    |
-| Firebase Cloud Messaging         | **10.17.0**        | **10.17.0**    |
-| Firebase Core                    | **10.17.0**        | **10.17.0**    |
+| Firebase Analytics               | **10.18.0**        | **10.18.0**    |
+| Firebase Auth                    | **10.18.0**        | **10.18.0**    |
+| Firebase Cloud Firestore         | **10.18.0**        | **10.18.0**    |
+| Firebase Cloud Functions         | **10.18.0**        | **10.18.0**    |
+| Firebase Cloud Messaging         | **10.18.0**        | **10.18.0**    |
+| Firebase Core                    | **10.18.0**        | **10.18.0**    |
 | Firebase Crashlytics             | **8.10.0**         | **8.10.0**     |
 | Firebase Database                | **8.10.0**         | **8.10.0**     |
 | Firebase Dynamic Links           | **8.10.0**         | **8.10.0**     |
 | Firebase In App Messaging        | **8.10.0**         | **8.10.0**     |
-| Firebase Installations           | **10.17.0**        | **10.17.0**    |
+| Firebase Installations           | **10.18.0**        | **10.18.0**    |
 | Firebase Performance Monitoring  | **8.10.0**         | **8.10.0**     |
 | Firebase RemoteConfig            | **8.10.0**         | **8.10.0**     |
-| Firebase Storage                 | **10.17.0**        | **10.17.0**    |
+| Firebase Storage                 | **10.18.0**        | **10.18.0**    |
 | Google User Messaging Platform   | **1.1.0.0**        | **8.10.0**     |
 | Google Cast                      | **4.7.0.0**        | **8.10.0**     |
 | Google Sign-In                   | **5.0.2.2**        | **8.10.0**     |
