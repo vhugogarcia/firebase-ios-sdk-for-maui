@@ -1,3 +1,28 @@
+# Overview
+This is a community-supported fork of the GoogleApisForiOSComponents repo maintained initially by Xamarin. Microsoft just kind of stopped maintaining these bindings libraries, which were published under the package prefixes Xamarin.Firebase.iOS.* and Xamarin.Google.iOS.*
+
+Apple's new privacy manifest requirements, which went into effect 1 May 2024, impacted all Xamarin.Firebase.iOS.* packages. App Store compliance requires native SDK versions 10.24+, while the Xamarin packages are stuck on 8.10.
+
+Less than two months before this privacy deadline, Microsoft's response to impacted developers was that they "don't have any updates to share about producing new versions of those packages", and suggested that developers re-write their own bindings using this [slim binding demo project](https://github.com/Redth/DotNet.Platform.SlimBindings) as a guide.
+
+As an alternative solution for the community, I created this fork and upgraded a subset of the affected packages to latest native SDK versions and published them under a new package prefix:
+
+- [AdamE.Firebase.iOS.Core](https://www.nuget.org/packages/AdamE.Firebase.iOS.Core)
+- [AdamE.Firebase.iOS.Analytics](https://www.nuget.org/packages/AdamE.Firebase.iOS.Analytics)
+- [AdamE.Firebase.iOS.Auth](https://www.nuget.org/packages/AdamE.Firebase.iOS.Auth)
+- [AdamE.Firebase.iOS.CloudFirestore](https://www.nuget.org/packages/AdamE.Firebase.iOS.CloudFirestore)
+- [AdamE.Firebase.iOS.CloudFunctions](https://www.nuget.org/packages/AdamE.Firebase.iOS.CloudFunctions)
+- [AdamE.Firebase.iOS.CloudMessaging](https://www.nuget.org/packages/AdamE.Firebase.iOS.CloudMessaging)
+- [AdamE.Firebase.iOS.Installations](https://www.nuget.org/packages/AdamE.Firebase.iOS.Installations)
+- [AdamE.Firebase.iOS.Storage](https://www.nuget.org/packages/AdamE.Firebase.iOS.Storage)
+- [AdamE.Firebase.iOS.Crashlytics](https://www.nuget.org/packages/AdamE.Firebase.iOS.Crashlytics)
+- [AdamE.Firebase.iOS.ABTesting](https://www.nuget.org/packages/AdamE.Firebase.iOS.ABTesting)
+- [AdamE.Firebase.iOS.RemoteConfig](https://www.nuget.org/packages/AdamE.Firebase.iOS.RemoteConfig)
+- [AdamE.Firebase.iOS.DynamicLinks](https://www.nuget.org/packages/AdamE.Firebase.iOS.DynamicLinks)
+- [AdamE.Firebase.iOS.Database](https://www.nuget.org/packages/AdamE.Firebase.iOS.Database)
+
+If these packages are important to you, please consider [sponsoring the project](https://github.com/sponsors/AdamEssenmacher) and/or contributing to this fork.
+
 # Fork notes:
 
 ## Firebase Analytics
