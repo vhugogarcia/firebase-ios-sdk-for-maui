@@ -92,7 +92,7 @@ On .NET8, you must set the following property. Note that this will increase your
 
 ```xml
 <!--https://github.com/xamarin/GoogleApisForiOSComponents/issues/643#issuecomment-1920970044-->
-<PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-ios'">
+<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
     <_ExportSymbolsExplicitly>false</_ExportSymbolsExplicitly>
 </PropertyGroup>
 ```
