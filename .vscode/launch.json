@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Firebase Sample (Debug)",
+            "type": "maui",
+            "request": "launch",
+            "configuration": "Debug",
+            "targetFramework": "net8.0-ios",
+            "project": "/Users/vhugo/Personal/GitHub/firebase-ios-sdk-for-maui/samples/Firebase/MauiFirebaseSample/MauiFirebaseSample.csproj",
+            "preLaunchTask": "maui: Build"
+        },
+        {
+            "name": "Google Cast Sample (Debug)",
+            "type": "maui",
+            "request": "launch",
+            "configuration": "Debug",
+            "targetFramework": "net8.0-ios",
+            "project": "/Users/vhugo/Personal/GitHub/firebase-ios-sdk-for-maui/samples/Google/MauiGoogleCastSample/MauiGoogleCastSample.csproj",
+            "preLaunchTask": "maui: Build"
+        },
+        {
+            "name": "MLKit Sample (Debug)",
+            "type": "maui",
+            "request": "launch",
+            "configuration": "Debug",
+            "targetFramework": "net8.0-ios",
+            "project": "/Users/vhugo/Personal/GitHub/firebase-ios-sdk-for-maui/samples/MLKit/MauiMLKitSample/MauiMLKitSample.csproj",
+            "preLaunchTask": "maui: Build"
+        }
+    ]
+}

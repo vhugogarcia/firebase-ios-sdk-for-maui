@@ -1,8 +1,8 @@
-#addin nuget:?package=Cake.Incubator&version=3.0.0
-#addin nuget:?package=Cake.Yaml&version=2.1.0
-#addin nuget:?package=Cake.Json&version=3.0.1
-#addin nuget:?package=Newtonsoft.Json&version=9.0.1
-#addin nuget:?package=YamlDotNet&version=5.0.0
+#addin nuget:?package=Cake.Incubator&version=8.0.0
+#addin nuget:?package=Cake.Yaml&version=6.0.0
+#addin nuget:?package=Cake.Json&version=7.0.1
+#addin nuget:?package=Newtonsoft.Json&version=13.0.3
+#addin nuget:?package=YamlDotNet&version=15.1.4
 
 #load "poco.cake"
 #load "poco.yaml.cake"

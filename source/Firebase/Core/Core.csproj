@@ -1,6 +1,6 @@
-﻿<Project Sdk="Xamarin.Legacy.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>xamarin.ios10;net6.0-ios</TargetFrameworks>
+    <TargetFrameworks>net8.0-ios</TargetFrameworks>
     <NoNFloatUsing Condition="'$(TargetFramework)' == 'xamarin.ios10'">true</NoNFloatUsing>
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
@@ -50,57 +50,57 @@
        NativeReference tag for the iOS binding and for the .targets file -->
   <Import Project="Core.targets" />
   <ItemGroup>
-    <_NativeReference Include="..\..\..\externals\FirebaseCore.xcframework">
+    <_NativeReference Include="..\..\..\externals\_FirebaseCore.xcframework">
       <_Id>$(_FirebaseCoreId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\GTMSessionFetcher.xcframework">
+    <_NativeReference Include="..\..\..\externals\_GTMSessionFetcher.xcframework">
       <_Id>$(_GTMSessionFetcherId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\GoogleDataTransport.xcframework">
+    <_NativeReference Include="..\..\..\externals\_GoogleDataTransport.xcframework">
       <_Id>$(_GoogleDataTransportId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\FBLPromises.xcframework">
+    <_NativeReference Include="..\..\..\externals\_FBLPromises.xcframework">
       <_Id>$(_FBLPromisesId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\GoogleUtilities.xcframework">
+    <_NativeReference Include="..\..\..\externals\_GoogleUtilities.xcframework">
       <_Id>$(_GoogleUtilitiesId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\nanopb.xcframework">
+    <_NativeReference Include="..\..\..\externals\_nanopb.xcframework">
       <_Id>$(_nanopbId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\leveldb.xcframework">
+    <_NativeReference Include="..\..\..\externals\_leveldb.xcframework">
       <_Id>$(_leveldbId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\FirebaseAppCheckInterop.xcframework">
+    <_NativeReference Include="..\..\..\externals\_FirebaseAppCheckInterop.xcframework">
       <_Id>$(_FirebaseAppCheckInteropId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\FirebaseAuthInterop.xcframework">
+    <_NativeReference Include="..\..\..\externals\_FirebaseAuthInterop.xcframework">
       <_Id>$(_FirebaseAuthInteropId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\FirebaseCoreExtension.xcframework">
+    <_NativeReference Include="..\..\..\externals\_FirebaseCoreExtension.xcframework">
       <_Id>$(_FirebaseCoreExtensionId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\FirebaseCoreInternal.xcframework">
+    <_NativeReference Include="..\..\..\externals\_FirebaseCoreInternal.xcframework">
       <_Id>$(_FirebaseCoreInternalId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\FirebaseMessagingInterop.xcframework">
+    <_NativeReference Include="..\..\..\externals\_FirebaseMessagingInterop.xcframework">
       <_Id>$(_FirebaseMessagingInteropId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\FirebaseRemoteConfigInterop.xcframework">
+    <_NativeReference Include="..\..\..\externals\_FirebaseRemoteConfigInterop.xcframework">
       <_Id>$(_FirebaseRemoteConfigInteropId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\FirebaseSharedSwift.xcframework">
+    <_NativeReference Include="..\..\..\externals\_FirebaseSharedSwift.xcframework">
       <_Id>$(_FirebaseSharedSwiftId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\Promises.xcframework">
+    <_NativeReference Include="..\..\..\externals\_Promises.xcframework">
       <_Id>$(_Promises)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\FirebaseSessions.xcframework">
+    <_NativeReference Include="..\..\..\externals\_FirebaseSessions.xcframework">
       <_Id>$(_FirebaseSessions)</_Id>
     </_NativeReference>
   </ItemGroup>
   <!-- End of workaround -->
-  <ItemGroup Condition="'$(TargetFramework)' == 'xamarin.ios10'">
+  <ItemGroup>
     <Compile Remove="ApiDefinition.cs" />
     <Compile Remove="Enums.cs" />
   </ItemGroup>
@@ -111,6 +111,6 @@
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true'" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Build.Download" Version="0.11.0" PrivateAssets="None" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.11.4" PrivateAssets="None" />
   </ItemGroup>
 </Project>

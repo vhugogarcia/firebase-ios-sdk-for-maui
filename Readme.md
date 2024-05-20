@@ -149,14 +149,7 @@ Firebase.RemoteConfig
 Firebase.Storage
 
 // Google keys
-Google.Analytics
 Google.Cast
-Google.Maps
-Google.MobileAds
-Google.UserMessagingPlatform
-Google.Places
-Google.SignIn
-Google.TagManager
 
 // MLKit keys
 MLKit.BarcodeScanning

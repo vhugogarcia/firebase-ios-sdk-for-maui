@@ -1,6 +1,6 @@
-﻿<Project Sdk="Xamarin.Legacy.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>xamarin.ios10;net6.0-ios</TargetFrameworks>
+    <TargetFrameworks>net8.0-ios</TargetFrameworks>
     <NoNFloatUsing Condition="'$(TargetFramework)' == 'xamarin.ios10'">true</NoNFloatUsing>
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
@@ -50,27 +50,27 @@
        NativeReference tag for the iOS binding and for the .targets file -->
   <Import Project="CloudFirestore.targets" />
   <ItemGroup>
-    <_NativeReference Include="..\..\..\externals\FirebaseFirestore.xcframework">
+    <_NativeReference Include="..\..\..\externals\_FirebaseFirestore.xcframework">
       <_Id>$(_FirebaseFirestoreId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\FirebaseFirestoreInternal.xcframework">
+    <_NativeReference Include="..\..\..\externals\_FirebaseFirestoreInternal.xcframework">
       <_Id>$(_FirebaseFirestoreIntrnalId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\grpc.xcframework">
+    <_NativeReference Include="..\..\..\externals\_grpc.xcframework">
       <_Id>$(_grpcId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\grpcpp.xcframework">
+    <_NativeReference Include="..\..\..\externals\_grpcpp.xcframework">
       <_Id>$(_grpcppId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\openssl_grpc.xcframework">
+    <_NativeReference Include="..\..\..\externals\_openssl_grpc.xcframework">
       <_Id>$(_openssl_grpcId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\absl.xcframework">
+    <_NativeReference Include="..\..\..\externals\_absl.xcframework">
       <_Id>$(_abslId)</_Id>
     </_NativeReference>
   </ItemGroup>
   <!-- End of workaround -->
-  <ItemGroup Condition="'$(TargetFramework)' == 'xamarin.ios10'">
+  <ItemGroup>
     <Compile Remove="ApiDefinition.cs" />
     <Compile Remove="Enums.cs" />
   </ItemGroup>
@@ -81,7 +81,7 @@
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true'" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Build.Download" Version="0.11.0" PrivateAssets="None" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.11.4" PrivateAssets="None" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj" PrivateAssets="None" />

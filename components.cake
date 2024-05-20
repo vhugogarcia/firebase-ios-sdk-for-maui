@@ -14,18 +14,9 @@ Artifact FIREBASE_INSTALLATIONS_ARTIFACT           = new Artifact ("Firebase.Ins
 Artifact FIREBASE_PERFORMANCE_MONITORING_ARTIFACT  = new Artifact ("Firebase.PerformanceMonitoring",  "8.10.0.3",         "11.0", ComponentGroup.Firebase, csprojName: "PerformanceMonitoring");
 Artifact FIREBASE_REMOTE_CONFIG_ARTIFACT           = new Artifact ("Firebase.RemoteConfig",           "10.24.0.0-alpha1", "11.0", ComponentGroup.Firebase, csprojName: "RemoteConfig");
 Artifact FIREBASE_STORAGE_ARTIFACT                 = new Artifact ("Firebase.Storage",                "10.24.0.0",        "11.0", ComponentGroup.Firebase, csprojName: "Storage");
-// Artifact FIREBASE_APP_DISTRIBUTION_ARTIFACT        = new Artifact ("Firebase.AppDistribution",        "8.10.0.1",   "10.0", ComponentGroup.Firebase, csprojName: "AppDistribution");
-// Artifact FIREBASE_APP_CHECK_ARTIFACT               = new Artifact ("Firebase.AppCheck",               "8.10.0.1",   "11.0", ComponentGroup.Firebase, csprojName: "AppCheck");
 
 // Google artifacts available to be built. These artifacts generate NuGets.
-Artifact GOOGLE_ANALYTICS_ARTIFACT    = new Artifact ("Google.Analytics",             "3.20.0.2", "11.0",  ComponentGroup.Google, csprojName: "Analytics");
-Artifact GOOGLE_CAST_ARTIFACT         = new Artifact ("Google.Cast",                  "4.7.0.1",  "12.0", ComponentGroup.Google, csprojName: "Cast");
-Artifact GOOGLE_MAPS_ARTIFACT         = new Artifact ("Google.Maps",                  "6.0.1.1",  "12.0", ComponentGroup.Google, csprojName: "Maps");
-Artifact GOOGLE_MOBILE_ADS_ARTIFACT   = new Artifact ("Google.MobileAds",             "8.13.0.3", "11.0", ComponentGroup.Google, csprojName: "MobileAds");
-Artifact GOOGLE_UMP_ARTIFACT          = new Artifact ("Google.UserMessagingPlatform", "1.1.0.1",  "11.0", ComponentGroup.Google, csprojName: "UserMessagingPlatform");
-Artifact GOOGLE_PLACES_ARTIFACT       = new Artifact ("Google.Places",                "6.0.0.1",  "12.0", ComponentGroup.Google, csprojName: "Places");
-Artifact GOOGLE_SIGN_IN_ARTIFACT      = new Artifact ("Google.SignIn",                "5.0.2.4",  "11.0", ComponentGroup.Google, csprojName: "SignIn");
-Artifact GOOGLE_TAG_MANAGER_ARTIFACT  = new Artifact ("Google.TagManager",            "7.4.0.2",  "11.0", ComponentGroup.Google, csprojName: "TagManager");
+Artifact GOOGLE_CAST_ARTIFACT         = new Artifact ("Google.Cast",                  "4.8.1.2",  "12.0", ComponentGroup.Google, csprojName: "Cast");
 
 // MLKit artifacts available to be built. These artifacts generate NuGets.
 Artifact MLKIT_CORE_ARTIFACT                     = new Artifact ("MLKit.Core",                        "5.0.0",    "10.0", ComponentGroup.MLKit, csprojName: "Core");
@@ -58,31 +49,20 @@ var ARTIFACTS = new Dictionary<string, Artifact> {
 	{ "Firebase.PerformanceMonitoring",  FIREBASE_PERFORMANCE_MONITORING_ARTIFACT },
 	{ "Firebase.RemoteConfig",           FIREBASE_REMOTE_CONFIG_ARTIFACT },
 	{ "Firebase.Storage",                FIREBASE_STORAGE_ARTIFACT },
-	// { "Firebase.AppDistribution",        FIREBASE_APP_DISTRIBUTION_ARTIFACT },
-	// { "Firebase.AppCheck",               FIREBASE_APP_CHECK_ARTIFACT },
-
-	{ "Google.Analytics",             GOOGLE_ANALYTICS_ARTIFACT },
 	{ "Google.Cast",                  GOOGLE_CAST_ARTIFACT },	
-	{ "Google.Maps",                  GOOGLE_MAPS_ARTIFACT },
-	{ "Google.MobileAds",             GOOGLE_MOBILE_ADS_ARTIFACT },
-	{ "Google.UserMessagingPlatform", GOOGLE_UMP_ARTIFACT },
-	{ "Google.Places",                GOOGLE_PLACES_ARTIFACT },
-	{ "Google.SignIn",                GOOGLE_SIGN_IN_ARTIFACT },
-	{ "Google.TagManager",            GOOGLE_TAG_MANAGER_ARTIFACT },
-
-	// { "MLKit.Core",                       MLKIT_CORE_ARTIFACT },
-	// { "MLKit.TextRecognition",            MLKIT_TEXT_RECOGNITION },
-	// { "MLKit.Vision",                     MLKIT_VISION },
-	// { "MLKit.TextRecognition.Latin",      MLKIT_TEXT_RECOGNITION_LATIN },
-	// { "MLKit.TextRecognition.Chinese",    MLKIT_TEXT_RECOGNITION_CHINESE },
-	// { "MLKit.TextRecognition.Devanagari", MLKIT_TEXT_RECOGNITION_DEVANAGARI },
-	// { "MLKit.TextRecognition.Japanese",   MLKIT_TEXT_RECOGNITION_JAPANESE },
-	// { "MLKit.TextRecognition.Korean",     MLKIT_TEXT_RECOGNITION_KOREAN },
-	// { "MLKit.FaceDetection",              MLKIT_FACE_DETECTION },
-	// { "MLKit.BarcodeScanning",            MLKIT_BARCODE_SCANNING },
-	// { "MLKit.ImageLabeling",              MLKIT_IMAGE_LABELING },
-	// { "MLKit.ObjectDetection",            MLKIT_OBJECT_DETECTION },
-	// { "MLKit.DigitalInkRecognition",      MLKIT_DIGITAL_INK_RECOGNITION },
+    { "MLKit.Core",                       MLKIT_CORE_ARTIFACT },
+    { "MLKit.TextRecognition",            MLKIT_TEXT_RECOGNITION },
+    { "MLKit.Vision",                     MLKIT_VISION },
+    { "MLKit.TextRecognition.Latin",      MLKIT_TEXT_RECOGNITION_LATIN },
+    { "MLKit.TextRecognition.Chinese",    MLKIT_TEXT_RECOGNITION_CHINESE },
+    { "MLKit.TextRecognition.Devanagari", MLKIT_TEXT_RECOGNITION_DEVANAGARI },
+    { "MLKit.TextRecognition.Japanese",   MLKIT_TEXT_RECOGNITION_JAPANESE },
+    { "MLKit.TextRecognition.Korean",     MLKIT_TEXT_RECOGNITION_KOREAN },
+    { "MLKit.FaceDetection",              MLKIT_FACE_DETECTION },
+    { "MLKit.BarcodeScanning",            MLKIT_BARCODE_SCANNING },
+    { "MLKit.ImageLabeling",              MLKIT_IMAGE_LABELING },
+    { "MLKit.ObjectDetection",            MLKIT_OBJECT_DETECTION },
+    { "MLKit.DigitalInkRecognition",      MLKIT_DIGITAL_INK_RECOGNITION },
 };
 
 void SetArtifactsDependencies ()
@@ -102,17 +82,8 @@ void SetArtifactsDependencies ()
 	FIREBASE_PERFORMANCE_MONITORING_ARTIFACT.Dependencies  = new [] { FIREBASE_CORE_ARTIFACT, FIREBASE_INSTALLATIONS_ARTIFACT, FIREBASE_AB_TESTING_ARTIFACT, FIREBASE_REMOTE_CONFIG_ARTIFACT };
 	FIREBASE_REMOTE_CONFIG_ARTIFACT.Dependencies           = new [] { FIREBASE_CORE_ARTIFACT, FIREBASE_INSTALLATIONS_ARTIFACT, FIREBASE_AB_TESTING_ARTIFACT };
 	FIREBASE_STORAGE_ARTIFACT.Dependencies                 = new [] { FIREBASE_CORE_ARTIFACT, FIREBASE_DATABASE_ARTIFACT, /* Needed for sample FIREBASE_AUTH_ARTIFACT */ };
-	// FIREBASE_APP_DISTRIBUTION_ARTIFACT.Dependencies        = new [] { FIREBASE_CORE_ARTIFACT, FIREBASE_INSTALLATIONS_ARTIFACT };
-	// FIREBASE_APP_CHECK_ARTIFACT.Dependencies               = new [] { FIREBASE_CORE_ARTIFACT };
 
-	GOOGLE_ANALYTICS_ARTIFACT.Dependencies    = null;
 	GOOGLE_CAST_ARTIFACT.Dependencies         = new [] { FIREBASE_CORE_ARTIFACT };
-	GOOGLE_MAPS_ARTIFACT.Dependencies         = null;
-	GOOGLE_MOBILE_ADS_ARTIFACT.Dependencies   = new [] { FIREBASE_CORE_ARTIFACT };
-	GOOGLE_UMP_ARTIFACT.Dependencies          = null;
-	GOOGLE_PLACES_ARTIFACT.Dependencies       = new [] { GOOGLE_MAPS_ARTIFACT };
-	GOOGLE_SIGN_IN_ARTIFACT.Dependencies      = new [] { FIREBASE_CORE_ARTIFACT };
-	GOOGLE_TAG_MANAGER_ARTIFACT.Dependencies  = new [] { FIREBASE_CORE_ARTIFACT, FIREBASE_INSTALLATIONS_ARTIFACT, FIREBASE_ANALYTICS_ARTIFACT };
 
 	MLKIT_CORE_ARTIFACT.Dependencies                = new [] { FIREBASE_CORE_ARTIFACT };
 	MLKIT_TEXT_RECOGNITION.Dependencies             = new [] { FIREBASE_CORE_ARTIFACT, MLKIT_CORE_ARTIFACT };
@@ -200,54 +171,25 @@ void SetArtifactsPodSpecs ()
 	FIREBASE_STORAGE_ARTIFACT.PodSpecs = new [] {
 		PodSpec.Create ("FirebaseStorage", "10.24.0", frameworkSource: FrameworkSource.Pods)
 	};
-	// FIREBASE_APP_DISTRIBUTION_ARTIFACT.PodSpecs = new [] {
-	// 	PodSpec.Create ("Firebase", "8.10.0", frameworkSource: FrameworkSource.Pods, frameworkName: "FirebaseAppDistribution", targetName: "FirebaseAppDistribution", subSpecs: new [] { "AppDistribution" })		
-	// };
-	// FIREBASE_APP_CHECK_ARTIFACT.PodSpecs = new [] {
-	// 	PodSpec.Create ("Firebase", "8.10.0", frameworkSource: FrameworkSource.Pods, frameworkName: "FirebaseAppCheck", targetName: "FirebaseAppCheck", subSpecs: new [] { "AppCheck" })		
-	// };
 
 	// Google components
-	GOOGLE_ANALYTICS_ARTIFACT.PodSpecs = new [] {
-		PodSpec.Create ("GoogleAnalytics", "3.20.0")
-	};
 	GOOGLE_CAST_ARTIFACT.PodSpecs = new [] {
-		PodSpec.Create ("google-cast-sdk", "4.7.0")
-	};
-	GOOGLE_MAPS_ARTIFACT.PodSpecs = new [] {
-		PodSpec.Create ("GoogleMaps", "6.0.1")
-	};
-	GOOGLE_MOBILE_ADS_ARTIFACT.PodSpecs = new [] {
-		PodSpec.Create ("Google-Mobile-Ads-SDK", "8.13.0")
-	};
-	GOOGLE_UMP_ARTIFACT.PodSpecs = new [] {
-		PodSpec.Create ("GoogleUserMessagingPlatform", "1.1.0")
-	};
-	GOOGLE_PLACES_ARTIFACT.PodSpecs = new [] {
-		PodSpec.Create ("GooglePlaces", "6.0.0")
-	};
-	GOOGLE_SIGN_IN_ARTIFACT.PodSpecs = new [] {
-		PodSpec.Create ("GoogleSignIn", "5.0.2"),
-		PodSpec.Create ("AppAuth",      "1.4.0", frameworkSource: FrameworkSource.Pods),
-		PodSpec.Create ("GTMAppAuth",   "1.2.1", frameworkSource: FrameworkSource.Pods),
-	};
-	GOOGLE_TAG_MANAGER_ARTIFACT.PodSpecs = new [] {
-		PodSpec.Create ("GoogleTagManager", "7.4.0")
+		PodSpec.Create ("google-cast-sdk", "4.8.1.2")
 	};
 
 	// MLKit components
 	MLKIT_CORE_ARTIFACT.PodSpecs = new [] { 
 		PodSpec.Create ("MLKitCore",                       "5.0.0"),
-		PodSpec.Create ("MLKitVision",                     "3.0.0"),
+		PodSpec.Create ("MLKitVision",                     "4.2.0"),
 		PodSpec.Create ("MLImage",                         "1.0.0-beta2"),
-		PodSpec.Create ("MLKitMDD",                        "3.0.0"),
-		PodSpec.Create ("SSZipArchive",                    "2.4.2",       frameworkSource: FrameworkSource.Pods),
+		PodSpec.Create ("MLKitMDD",                        "4.2.0"),
+		PodSpec.Create ("SSZipArchive",                    "2.5.4",       frameworkSource: FrameworkSource.Pods),
 	};
 	MLKIT_TEXT_RECOGNITION.PodSpecs = new [] { 
 		PodSpec.Create ("MLKitTextRecognitionCommon",      "1.0.0")
 	};
 	MLKIT_VISION.PodSpecs = new [] { 
-		PodSpec.Create ("MLKitVision",                     "3.0.0")
+		PodSpec.Create ("MLKitVision",                     "4.2.0")
 	};
 	MLKIT_TEXT_RECOGNITION_LATIN.PodSpecs = new [] { 
 		PodSpec.Create ("MLKitTextRecognition",            "1.4.0")
@@ -265,19 +207,19 @@ void SetArtifactsPodSpecs ()
 		PodSpec.Create ("MLKitTextRecognitionKorean",      "1.0.0")
 	};
 	MLKIT_FACE_DETECTION.PodSpecs = new [] { 
-		PodSpec.Create ("MLKitFaceDetection",              "1.5.0")
+		PodSpec.Create ("MLKitFaceDetection",              "2.2.0")
 	};
 	MLKIT_BARCODE_SCANNING.PodSpecs = new [] { 
-		PodSpec.Create ("MLKitBarcodeScanning",            "1.6.0")
+		PodSpec.Create ("MLKitBarcodeScanning",            "2.2.0")
 	};
 	MLKIT_DIGITAL_INK_RECOGNITION.PodSpecs = new [] { 
-		PodSpec.Create ("MLKitDigitalInkRecognition",      "1.5.0")
+		PodSpec.Create ("MLKitDigitalInkRecognition",      "2.2.0")
 	};
 	MLKIT_IMAGE_LABELING.PodSpecs = new [] { 
-		PodSpec.Create ("MLKitImageLabeling",              "1.5.0")
+		PodSpec.Create ("MLKitImageLabeling",              "2.2.0")
 	};
 	MLKIT_OBJECT_DETECTION.PodSpecs = new [] { 
-		PodSpec.Create ("MLKitObjectDetection",            "1.5.0")
+		PodSpec.Create ("MLKitObjectDetection",            "2.2.0")
 	};
 }
 
@@ -307,7 +249,7 @@ void SetArtifactsExtraPodfileLines ()
 
 	var avoidBundleSigning = new [] {
 		"=begin",
-		"It seems that there is an issue with bundles and Xcode 14, it asks for your Team ID to sign them when building.",
+		"It seems that there is an issue with bundles and Xcode 15, it asks for your Team ID to sign them when building.",
 		"Here's a workaround for this: https://github.com/CocoaPods/CocoaPods/issues/8891#issuecomment-1201465446",
 		"=end",
 		"post_install do |installer|",
@@ -339,8 +281,6 @@ void SetArtifactsExtraPodfileLines ()
 	FIREBASE_PERFORMANCE_MONITORING_ARTIFACT.ExtraPodfileLines = extraPodfileLines.ToArray ();
 	FIREBASE_REMOTE_CONFIG_ARTIFACT.ExtraPodfileLines = extraPodfileLines.ToArray ();
 	FIREBASE_STORAGE_ARTIFACT.ExtraPodfileLines = extraPodfileLines.ToArray ();
-	// FIREBASE_APP_DISTRIBUTION_ARTIFACT.ExtraPodfileLines = dynamicFrameworkLines;
-	// FIREBASE_APP_CHECK_ARTIFACT.ExtraPodfileLines = dynamicFrameworkLines;
 	
 	var inAppMessagingWorkaround = new [] {
 		"post_install do |installer|",
@@ -388,17 +328,9 @@ void SetArtifactsSamples ()
 	FIREBASE_PERFORMANCE_MONITORING_ARTIFACT.Samples  = new [] { "PerformanceMonitoringSample" };
 	FIREBASE_REMOTE_CONFIG_ARTIFACT.Samples           = new [] { "RemoteConfigSample" };
 	FIREBASE_STORAGE_ARTIFACT.Samples                 = new [] { "StorageSample" };
-	//FIREBASE_APP_DISTRIBUTION_ARTIFACT.Samples        = new [] { "AppDistributionSample" };
-	//FIREBASE_APP_CHECK_ARTIFACT.Samples               = new [] { "AppCheckSample" };
 
 	// Google components
-	GOOGLE_ANALYTICS_ARTIFACT.Samples                 = new [] { "AnalyticsSample" };
 	GOOGLE_CAST_ARTIFACT.Samples                      = new [] { "CastSample" };
-	GOOGLE_MAPS_ARTIFACT.Samples                      = new [] { "GoogleMapsSample" };
-	GOOGLE_MOBILE_ADS_ARTIFACT.Samples                = new [] { "MobileAdsExample" };
-	GOOGLE_PLACES_ARTIFACT.Samples                    = new [] { "GooglePlacesSample" };
-	GOOGLE_SIGN_IN_ARTIFACT.Samples                   = new [] { "SignInExample" };
-	GOOGLE_TAG_MANAGER_ARTIFACT.Samples               = new [] { "TagManagerSample" };
 
 	// MLKit
 	MLKIT_VISION.Samples                              = new [] { "MLKitVisionSample" };
