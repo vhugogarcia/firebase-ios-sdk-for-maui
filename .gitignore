@@ -15,5 +15,3 @@ externals
 artifacts
 *.user
 GoogleService-Info.plist
-externals/*.zip
-externals/*.xcframework
