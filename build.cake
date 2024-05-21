@@ -1,5 +1,5 @@
 #addin nuget:?package=Cake.XCode&version=4.2.0
-#addin nuget:?package=Cake.Xamarin.Build&version=4.1.1
+#addin nuget:?package=Cake.Xamarin.Build&version=4.1.2
 #addin nuget:?package=Cake.FileHelpers&version=3.2.0
 
 #load "poco.cake"
@@ -16,7 +16,7 @@ var BUILD_TIMESTAMP = DateTime.UtcNow.ToString();
 var IS_LOCAL_BUILD = true;
 var BACKSLASH = string.Empty;
 
-var SOLUTION_PATH = "./Xamarin.Google.sln";
+var SOLUTION_PATH = "./Maui.Firebase.sln";
 var EXTERNALS_PATH = new DirectoryPath ("./externals");
 
 // Artifacts that need to be built from pods or be copied from pods
